@@ -147,6 +147,3 @@ The component replicates a **physical wall calendar** aesthetic while adding mod
 
 ---
 
-## 📄 License
-
-MIT
