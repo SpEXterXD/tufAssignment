@@ -2,7 +2,12 @@
 
 A production-grade, fully interactive **wall calendar** React component built with Next.js, TypeScript, and Tailwind CSS. Inspired by a physical wall calendar aesthetic — spiral wire bindings, hero imagery, blue chevron dividers — translated into a responsive, touch-friendly web experience.
 
-![Wall Calendar Preview](docs/preview.png)
+
+https://youtu.be/ZsueBL28FcA
+
+https://github.com/user-attachments/assets/e7b9e654-83b6-49ec-b52e-c44e48c29fb3
+
+
 
 ---
 
