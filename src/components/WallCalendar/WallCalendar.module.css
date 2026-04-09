@@ -1,0 +1,141 @@
+/* ===== Notes textarea with ruled lines ===== */
+.notesTextarea {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 27px,
+    var(--cal-rule-color, #d1d5db) 27px,
+    var(--cal-rule-color, #d1d5db) 28px
+  );
+  line-height: 28px;
+  resize: none;
+  width: 100%;
+  min-height: 168px;
+  padding: 4px 8px;
+  font-size: 0.8125rem;
+  color: #374151;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-family: inherit;
+}
+
+/* Mobile: shorter notes area */
+@media (max-width: 767px) {
+  .notesTextarea {
+    min-height: 112px;
+  }
+}
+
+.notesTextarea::placeholder {
+  color: #9ca3af;
+  font-style: italic;
+}
+
+.notesTextarea:focus {
+  outline: none;
+}
+
+/* ===== Card container ===== */
+.calendarCard {
+  background: #ffffff;
+  border-radius: 0 0 16px 16px;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.07),
+    0 10px 25px -5px rgba(0, 0, 0, 0.1),
+    0 20px 50px -12px rgba(0, 0, 0, 0.14);
+  overflow: hidden;
+  max-width: 600px;
+  width: 100%;
+  position: relative;
+}
+
+/* Mobile: full-width, no max */
+@media (max-width: 767px) {
+  .calendarCard {
+    max-width: 100%;
+    border-radius: 0 0 12px 12px;
+  }
+}
+
+/* ===== Flip container ===== */
+.flipContainer {
+  perspective: 1200px;
+  max-width: 600px;
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .flipContainer {
+    max-width: 100%;
+  }
+}
+
+/* ===== Content area layout ===== */
+.contentArea {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .contentArea {
+    flex-direction: row;
+  }
+}
+
+/* ===== Notes panel ===== */
+.notesPanel {
+  width: 100%;
+  flex-shrink: 0;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 8px 12px;
+}
+
+@media (min-width: 768px) {
+  .notesPanel {
+    width: 9rem; /* w-36 */
+    border-bottom: none;
+    border-right: 1px solid #e5e7eb;
+    padding: 8px 12px;
+  }
+}
+
+/* ===== Grid area ===== */
+.gridArea {
+  flex: 1;
+  padding: 8px 12px;
+}
+
+@media (min-width: 768px) {
+  .gridArea {
+    padding: 8px 16px;
+  }
+}
+
+/* ===== Status bar ===== */
+.statusBar {
+  padding: 8px 16px;
+  font-size: 0.75rem;
+  color: #6b7280;
+  border-top: 1px solid #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ===== Print stylesheet ===== */
+@media print {
+  .calendarCard {
+    box-shadow: none;
+    max-width: 100%;
+    border: 1px solid #e5e7eb;
+  }
+
+  .hideOnPrint {
+    display: none !important;
+  }
+
+  .notesTextarea {
+    border: 1px solid #e5e7eb;
+  }
+}
